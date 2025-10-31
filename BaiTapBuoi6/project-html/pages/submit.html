@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>submit.html</title>
+</head>
+<body>
+<form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+
+    <label for="fullname">Họ tên:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên" value="Nguyễn Văn A" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    <br><br>
+
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+    <br><br>
+
+    <label for="age">Tuổi:</label>
+    <input type="number" id="age" name="age" placeholder="Nhập Tuổi">
+    <br><br>
+
+    <label for="category">Danh mục:</label>
+    <select id="category" name="category" required>
+        <option>Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="devops">DevOps</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Gửi">
+
+</form>
+<div>
+    <ul>
+        <li><a href="../../project-html/index.html">Trang Chủ</a></li>
+        <li><a href="courses.html">Danh sách khóa học</a></li>
+        <li><a href="lab.html">Phòng thí nghiệm (Form GET)</a></li>
+        <li><a href="contact.html">Liên hệ (Media)</a></li>
+        <li><a href="about.html">About(Giới Thiệu)</a></li>
+    </ul>
+</div>
+</body>
+</html>

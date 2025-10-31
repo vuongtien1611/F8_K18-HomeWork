@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab.html</title>
+</head>
+<body>
+<form method="GET" action="lab.html">
+
+
+    <label for="q">Tìm kiếm:</label>
+    <input type="text" id="q" name="q" placeholder="Tìm kiếm..."><br><br>
+
+
+
+        <label>Trình độ:</label> <br>
+
+        <input type="checkbox" id="lv1" name="level" value="Beginner">
+        <label for="lv1">Beginner</label><br>
+
+        <input type="checkbox" id="lv2" name="level" value="Intermediate">
+        <label for="lv2">Intermediate</label><br>
+
+        <input type="checkbox" id="lv3" name="level" value="Advanced">
+        <label for="lv3">Advanced</label><br>
+
+    <br>
+
+
+
+        <label>Hình thức:</label><br>
+
+        <input type="radio" id="online" name="mode" value="online">
+        <label for="online">Online</label><br>
+
+        <input type="radio" id="offline" name="mode" value="offline">
+        <label for="offline">Offline</label>
+    <br>
+    <br>
+
+
+    <label for="cat">Danh mục:</label>
+    <select id="cat" name="category">
+        <option value="">--Chọn--</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="devops">DevOps</option>
+    </select>
+    <br><br>
+
+    <input type="hidden" name="source" value="lab">
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+<div>
+    <ul>
+        <li><a href="../../project-html/index.html">Trang Chủ</a></li>
+        <li><a href="courses.html">Danh sách khóa học</a></li>
+        <li><a href="submit.html">Trang gửi form (POST)</a></li>
+        <li><a href="contact.html">Liên hệ (Media)</a></li>
+        <li><a href="about.html">About(Giới Thiệu)</a></li>
+    </ul>
+</div>
+</body>
+</html>
+
