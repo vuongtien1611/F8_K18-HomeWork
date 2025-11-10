@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+
+    <style>
+        h1 {
+            background-color: #f98000;
+            color: #fff;
+        }
+
+
+        #theme-light:checked + label {
+            background-color: #fff8cc;
+            color: #8b5e00;
+        }
+        #theme-light:checked ~ .theme-light {
+            background-color: #fff8cc;
+            color: #111827;
+        }
+        #theme-light:checked ~ .theme-dark {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+        #theme-dark:checked + label {
+            background-color: #111827;
+            color: #fff;
+        }
+        #theme-dark:checked ~ .theme-dark {
+            background-color: #111827;
+            color: #fff;
+        }
+        #theme-dark:checked ~ .theme-light {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+
+        #color-red:checked + label {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        #color-red:checked ~ .main-red {
+            background-color: #fee2e2;
+            color: #7f1d1d;
+        }
+        #color-red:checked ~ .main-blue,
+        #color-red:checked ~ .main-green {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+        #color-blue:checked + label {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+        #color-blue:checked ~ .main-blue {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+        #color-blue:checked ~ .main-red,
+        #color-blue:checked ~ .main-green {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+        #color-green:checked + label {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        #color-green:checked ~ .main-green {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        #color-green:checked ~ .main-red,
+        #color-green:checked ~ .main-blue {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+
+        #lang-vi:checked + label {
+            background-color: #bbf7d0;
+            color: #166534;
+        }
+        #lang-vi:checked ~ .lang-vi {
+            background-color: #bbf7d0;
+            color: #166534;
+        }
+        #lang-vi:checked ~ .lang-en {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+        #lang-en:checked + label {
+            background-color: #bfdbfe;
+            color: #1d4ed8;
+        }
+        #lang-en:checked ~ .lang-en {
+            background-color: #bfdbfe;
+            color: #1d4ed8;
+        }
+        #lang-en:checked ~ .lang-vi {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+
+        #opt-1:checked + label {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        #opt-1:checked ~ #content-1 {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        #opt-2:checked + label {
+            background-color: #bbf7d0;
+            color: #166534;
+        }
+        #opt-2:checked ~ #content-2 {
+            background-color: #bbf7d0;
+            color: #166534;
+        }
+
+        #opt-3:checked + label {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        #opt-3:checked ~ #content-3 {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .option-box {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Trung tâm cấu hình giao diện (Demo)</h1>
+
+<p>Chọn giao diện (Theme):</p>
+<input type="radio" name="theme" id="theme-light">
+<label for="theme-light">Light</label>
+
+<input type="radio" name="theme" id="theme-dark">
+<label for="theme-dark">Dark</label>
+
+
+<p>Chọn Màu chủ đạo (color):</p>
+<input type="radio" name="color" id="color-red">
+<label for="color-red">Red</label>
+
+<input type="radio" name="color" id="color-blue">
+<label for="color-blue">Blue</label>
+
+<input type="radio" name="color" id="color-green">
+<label for="color-green">Green</label>
+
+
+<p>Chọn Ngôn ngữ (Language):</p>
+<input type="radio" name="language" id="lang-vi">
+<label for="lang-vi">VI</label>
+<input type="radio" name="language" id="lang-en">
+<label for="lang-en">EN</label>
+
+
+<p>Tùy chọn bổ sung (Options - Checkbox):</p>
+<input type="checkbox" id="opt-1">
+<label for="opt-1">Hiển thị mô tả nâng cao</label>
+
+<input type="checkbox" id="opt-2">
+<label for="opt-2">Bật chế độ Eco</label>
+
+<input type="checkbox" id="opt-3">
+<label for="opt-3">Hiển thị cảnh báo quan trọng</label>
+
+
+<p class="theme-light">Theme Light: Giao diện sáng, chữ đen.</p>
+<p class="theme-dark">Theme Dark: Giao diện tối,chữ sáng.</p>
+
+<p class="main-red">Màu Red: được nhấn mạnh khi chọn Red.</p>
+<p class="main-blue">Màu Blue: được nhấn mạnh khi chọn Blue.</p>
+<p class="main-green">Màu Green: được nhấn mạnh khi chọn Green.</p>
+
+<p class="lang-vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn</p>
+<p class="lang-en">[EN] Hello world! Khi chọn EN, dòng này rõ hơn</p>
+
+<p class="option-box" id="content-1">Mô tả nâng cao: giải thích kĩ hơn về cách các lựa chọn đang ảnh hưởng giao diện</p>
+<p class="option-box" id="content-2">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện</p>
+<p class="option-box" id="content-3">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</p>
+
+</body>
+</html>
