@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.header {
+    margin: 0;
+    padding: 3rem;
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem 2rem 2rem 2rem;
+    border-bottom: 2rem none transparent;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2rem 2rem 2rem 2rem;
+    padding: 3rem;
+    width: 103rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1rem solid transparent;
+}
+
+.container h1{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+#h2{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #c084fc;
+    padding: 1rem;
+}
+
+.container:first-child p{
+    font-size: 1.25rem;
+}
+
+.container:first-child button{
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: none;
+    background-color: #a855f7;
+    padding: 1rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin: 2rem;
+}
+.container:first-child button:hover{
+    background-color: #9333ea;
+}
+
+.img{
+    width: 4rem;
+    height: 4rem;
+    background-image: url('https://files.fullstack.edu.vn/f8-prod/public-images/67c022029788c.png');
+    border-radius: 10rem 10rem 10rem 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border: 0.75rem solid rgba(192, 132, 252, 0.6);
+}
+#color{
+   color: #c084fc;
+    font-weight: bold;
+}
+.header .container p:nth-of-type(2){
+    font-size: 1.25rem;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+#check:checked ~ .advice {
+    background-color: rgba(192, 132, 252, 0.35);
+    color: #6b21a8;
+}
+
+.advice{
+    margin: 2rem auto;
+    border-radius: 2rem 2rem 2rem 2rem;
+    /*width: 100rem;*/
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.advice p:first-of-type{
+    font-weight: bold;
+    border-bottom: 0.1rem solid transparent;
+    font-size: 1.5rem;
+}
+.advice p:last-of-type{
+    margin: 0 auto;
+    text-align: center;
+    width: 90rem;
+}
+
+
+.container ol{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    gap: 4rem;
+
+}
+
+.icon img{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.icon span{
+    font-size: 1.75rem;
+    border-right: 2rem solid transparent;
+}
+
+footer{
+    text-align: center;
+    border-top: 0.1rem solid #c084fc;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
