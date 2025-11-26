@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 16px;
+}
+.container {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 2rem;
+}
+img {
+    width: 5rem;
+    height: 5rem;
+}
+.list {
+    display: inline-block;
+    position: relative;
+    margin-left: 5rem;
+}
+
+/* --- MENU NGANG --- */
+.list nav > ul {
+    list-style: none;
+    position: relative;
+    bottom: 2rem;
+
+}
+.list nav > ul > li {
+    display: inline-block;
+    position: relative;
+    margin: 0 2rem;
+}
+.list nav > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem 0;
+    position: relative;
+    font-size: 1.5rem;
+}
+/* tam giác */
+.list nav > ul > li > a::after {
+    content: "";
+    position: absolute;
+    right: -1.5rem;
+    top: 1.4rem;
+    border-top: 0.35rem solid #555555 ;
+    border-left: 0.35rem solid transparent;
+    border-right: 0.35rem solid transparent ;
+}
+
+/* --- SUBMENU CẤP 1 --- */
+.list nav > ul > li > ul {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    display: none;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 0.5rem 0;
+    width: 15rem;
+    font-size: 1rem;
+    list-style: none;
+
+}
+.list nav > ul > li > ul > li {
+    position: relative;
+}
+
+
+.list nav > ul > li > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* tam giác cho các li có submenu */
+#society::after,
+#region::after,
+#business::after,
+#expert::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border-top: 0.3rem solid transparent;
+    border-left: 0.3rem solid #555;
+    border-bottom: 0.3rem solid transparent;
+}
+
+/* --- SUBMENU CẤP 2 --- */
+.list nav ul ul ul {
+    position: absolute;
+    left: 14.9rem;
+    top: 0;
+    display: none;
+    background: #fff;
+    border: 1px solid #ddd;
+   font-size: 1rem;
+    list-style: none;
+    width: 15rem;
+}
+.list nav ul ul ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Hover hiển thị submenu */
+/*-----------cấp 1 ------------*/
+.list nav > ul > li:hover > ul {
+    display: block;
+    background: #ffffff;
+}
+.list nav > ul > li > ul > li > a:hover{
+    color: #d62828;
+}
+/*-----------cấp 2 ------------*/
+.list nav ul ul li:hover > ul {
+    display: block;
+    background: #ffffff;
+}
+.list nav > ul > li > ul > li > ul > li > a:hover{
+    color: #d62828;
+}
+
+/* Hover màu */
+.list nav > ul > li:hover > a {
+    color: #d62828;
+}
+.list nav ul ul li:hover {
+    background: #f5f5f5;
+}
+

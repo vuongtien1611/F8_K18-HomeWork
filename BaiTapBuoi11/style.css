@@ -176,3 +176,15 @@ footer{
     padding: 2rem;
 }
 
+.form{
+    display: flex;
+    width: 60rem;
+    margin: 0 auto;
+    height: 60rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.form img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
