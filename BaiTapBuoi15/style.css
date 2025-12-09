@@ -527,7 +527,7 @@ input[type="checkbox"]:checked ~ .content {
     padding: 0 1.5rem;
     border-radius: 10rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    z-index: 1000;
+    z-index: 100;
 }
 
 /* LOGO */
@@ -668,17 +668,29 @@ input[type="checkbox"]:checked ~ .content {
     border: 0.001rem solid #3a3b3c;
     border-radius: 2rem;
     padding: 0.7rem 2rem;
-    color: #334155;
+    color: #333333;
     display: flex;
     font-weight: bold;
 }
 .Login-Register > label > a{
     text-decoration: none;
+}
+.Login-Register > label:first-of-type > a{
     color: #333333;
+}
+
+.Login-Register > label:nth-of-type(2){
+    background: #a855f7;
+}
+.Login-Register > label:nth-of-type(2) > a{
+    color: white;
+}
+.Login-Register > label > a{
+  color: white;
 }
 .Login-Register > label:hover{
     background: #a855f7;
-    color: white;
+
 }
 .Navigation-Menu nav > ul > li:hover > a{
     color: #a855f7;
@@ -702,7 +714,6 @@ input[type="checkbox"]:checked ~ .content {
     width: 16rem;
 
     background: #fff;
-    padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -738,12 +749,14 @@ input[type="checkbox"]:checked ~ .content {
     top: 0;
     left: 100%;
     width: 16rem;
-
     background: #fff;
-    padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+.Navigation-Menu nav > ul > li > ul > li > a{
+    width: 3rem;
+}
+
 .Navigation-Menu nav > ul > li > ul > li > ul > li{
     padding: 0.7rem 1rem;
     display: block;
@@ -772,7 +785,6 @@ input[type="checkbox"]:checked ~ .content {
     width: 16rem;
 
     background: #fff;
-    padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -812,7 +824,6 @@ input[type="checkbox"]:checked ~ .content {
     width: 16rem;
 
     background: #fff;
-    padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -847,7 +858,6 @@ input[type="checkbox"]:checked ~ .content {
     left: 100%;
     width: 16rem;
     background: #fff;
-    padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }

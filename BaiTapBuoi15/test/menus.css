@@ -1,0 +1,13 @@
+.Our-Pricing-Times button {
+    width: 132px;
+    height: 55px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    padding: 14px 30px;
+}
+
+.Our-Pricing-Times button.active {
+    background: #FF9500;
+    color: white;
+}

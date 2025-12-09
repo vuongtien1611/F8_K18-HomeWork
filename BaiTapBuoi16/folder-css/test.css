@@ -1,0 +1,174 @@
+/* ====== FAQ Container ====== */
+
+.FAQ-Container {
+    margin-top: 230px;
+}
+
+.FAQ {
+    max-width: 1595px;
+    min-height: 1202px;
+    border-radius: 12px;
+    padding: 100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 100px;
+    background: #fff;
+    justify-content: space-between;
+}
+
+
+/* ====== Left Title Column ====== */
+
+.FAQ-Container-Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 408px;
+    gap: 50px;
+}
+
+.FAQ-Title > p:first-of-type {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #262626;
+}
+
+.FAQ-Title > p:last-of-type {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333;
+}
+
+
+/* ====== CTA Button ====== */
+
+.FAQ-Container-Title > a {
+    width: 164px;
+    height: 63px;
+    border-radius: 8px;
+    display: flex;
+    padding: 18px 24px;
+    background: #fff;
+    border: 1px solid #F1F1F3;
+    text-decoration: none;
+    color: #262626;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ====== Right FAQ List Column ====== */
+
+.FAQ-Container-List {
+    max-width: 867px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* ====== Each FAQ Item ====== */
+
+.FAQ-List {
+    border-radius: 12px;
+    padding: 50px 30px;
+    border: 1px solid #F1F1F3;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+/* ====== FAQ Heading Row ====== */
+
+.FAQ-Top {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.FAQ-Top > p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #262626;
+    width: 767px;
+    /*padding-bottom: 24px;*/
+}
+
+.FAQ-Top > label {
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+}
+
+.FAQ-Top > label > span {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF4E5;
+    font-size: 28px;
+}
+
+
+/* ====== FAQ Text + Extra Block ====== */
+
+.FAQ-List > p,
+.FAQ-Hover > p {
+    width: 767px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #4C4C4D;
+}
+
+
+/* ====== Bottom Bar ====== */
+
+.FAQ-List-Bottom {
+    width: 767px;
+    height: 96px;
+    border-radius: 8px;
+    padding: 20px 30px;
+    background: #F1F1F3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FAQ-List-Bottom > p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333;
+}
+
+
+/* ====== Hidden Content When Closed ====== */
+
+.FAQ-Hover {
+    display: none;
+    border-top: 1px solid #F1F1F3;
+}
+
+
+/* ====== OPTIONAL: Toggle (nếu bạn muốn thêm hiệu ứng mở/đóng) ====== */
+/*
+.FAQ-List.active .FAQ-Hover {
+    display: block;
+}
+
+.FAQ-List.active label span {
+    background: #FFE2C2;
+    transform: rotate(45deg);
+}
+*/

@@ -1,0 +1,131 @@
+.container-main{
+    position: relative;
+    padding: 0 0 100px 0;
+
+}
+.container-main-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    max-width: 965px;
+    max-height: 214px;
+}
+
+.lightning{
+    width: calc(785px + 62px);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    background: #FCFCFD;
+    border-radius: 11px;
+    margin: 0 auto;
+    padding: 14px 0 ;
+
+}
+
+.lightning > img:first-of-type{
+    position: absolute;
+    bottom: 85px;
+    left: -25px;
+    width: 39px;
+    height: 43px;
+}
+
+.lightning-content > img{
+    background: #FFF4E5;
+    border-radius: 6px;
+    padding: 14px;
+    gap: 10px;
+
+}
+
+.lightning-content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.lightning-content > h1 > strong{
+    color: #FF9500;
+}
+
+.lightning-content > h1{
+    font-size: 48px;
+    line-height: 150%;
+}
+
+.main-description{
+    text-align: center;
+    margin: 20px auto;
+    max-width: 965px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-description > p:first-of-type{
+    font-size: 38px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-description > p:last-of-type{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+/*-------button-------------*/
+.main-button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.main-button > button:first-of-type{
+    background: #FF9500;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 20px 20px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.main-button > button:last-of-type{
+    background: #fff;
+    border: 1px solid #F1F1F3;
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.container-main-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1595px;
+    border: 1px solid #F1F1F3;
+    background: #FCFCFD;
+    margin: 0 auto;
+    position: relative;
+    padding: 30px;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-top: 100px;
+    width: 1596px;
+    margin: 0 auto;
+}
+

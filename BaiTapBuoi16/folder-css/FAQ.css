@@ -1,0 +1,178 @@
+.FAQ-Container{
+    margin-top: 230px;
+}
+
+.FAQ{
+    max-width: 1595px;
+    border-radius: 12px;
+    padding: 100px;
+    display: flex;
+    top: 8534px;
+    left: 163px;
+    flex-direction: row;
+    margin: 0 auto;
+    background: white;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.FAQ-Container-Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 408px;
+    height: 293px;
+    gap: 50px;
+}
+
+.FAQ-Title > p:first-of-type{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    width: 408px;
+    color: #262626;
+}
+
+.FAQ-Title > p:last-of-type{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333333;
+}
+
+.FAQ-Container-Title > button{
+    width: 164px;
+    border-radius: 8px;
+    gap: 8px;
+    display: flex;
+    padding: 18px 24px;
+    background: white;
+    border: 1px solid #F1F1F3;
+}
+
+.FAQ-Container-Title > a{
+    width: 164px;
+    border-radius: 8px;
+    gap: 8px;
+    display: flex;
+    padding: 18px 24px;
+    background: white;
+    border: 1px solid #F1F1F3;
+
+    text-decoration: none;
+    color: #262626;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+    align-items: center;
+    justify-content: center;
+}
+
+.FAQ-Container-List{
+    max-width: 867px;
+    display: flex;
+    flex-direction: column;
+}
+
+.FAQ-List{
+    border-radius: 12px;
+    padding: 50px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border: 1px solid #F1F1F3;
+    background: white;
+    margin-top: 25px;
+}
+
+.FAQ-Top{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.FAQ-Top > p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #262626;
+    width: 767px;
+    gap: 30px;
+    margin-top: -10px;
+}
+
+.FAQ-Top > label{
+    width: 52px;
+    position: relative;
+    top: -20px;
+    border-radius: 8px;
+    background: #FFF4E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.FAQ-Top > label > span{
+    width: 52px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+    background: #FFF4E5;
+    font-size: 28px;
+}
+
+.FAQ-Hover > p{
+    width: 767px;
+    padding: 50px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #4C4C4D;
+}
+
+.FAQ-List-Bottom{
+    width: 767px;
+    border-radius: 8px;
+    border-width: 1px;
+    margin-top: 50px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: #F1F1F3;
+}
+
+.FAQ-List-Bottom > p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333333;
+}
+
+.FAQ-Hover{
+    display: none;
+    border-top: 1px solid #F1F1F3;
+    position: relative;
+    top: -40px;
+}
+
+.FAQ-Top> label > span::before{
+    content: "+";
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.FAQ-Checkbox:checked ~ .FAQ-Top > label > span::before{
+    content: "×";
+}
+
+.FAQ-Checkbox:checked ~ .FAQ-Hover{
+    display: block;
+}
+
+

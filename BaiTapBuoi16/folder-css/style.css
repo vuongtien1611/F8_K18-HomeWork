@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    border: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Be Vietnam Pro;
+}
+body{
+    background-color: #F7F7F8;
+    padding-top: 210px;
+}

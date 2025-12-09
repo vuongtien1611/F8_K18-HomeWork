@@ -1,0 +1,119 @@
+.Container-Footer-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    height: 472px;
+    gap: 50px;
+    background: white;
+}
+
+.Container-Footer-1 > p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    border-top: 1px solid #F1F1F3;
+    width: 1596px;
+    height: 27px;
+    color: #656567;
+    padding-top: 24px;
+
+
+}
+
+.footer{
+    padding: 100px 162px 30px 162px;
+    width: 1920px;
+    gap: 50px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Contact-Us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 392px;
+    height: 121px;
+    gap: 20px;
+}
+
+.logo{
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+}
+
+.Infomation-Contact{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Container-Home{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Email{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+
+}
+
+.Container-Home,
+.Container-Social-Profiles,
+.Container-About-Us
+{
+    width: 249px;
+    gap: 14px;
+    margin: 0 auto;
+}
+
+.Container-Home > p,
+.Container-About-Us > p,
+.Container-Social-Profiles > p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.Home{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #59595A;
+}
+
+.Container-About-Us{
+    display: flex;
+    flex-direction: column;
+    width: 249px;
+    height: 141px;
+    gap: 14px;
+}
+.Container-Social-Profiles{
+    display: flex;
+    flex-direction: column;
+    width: 249px;
+    height: 96px;
+    gap: 14px;
+}
+

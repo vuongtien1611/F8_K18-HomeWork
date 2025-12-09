@@ -1,0 +1,220 @@
+.Our-Pricing{
+    display: flex;
+    flex-direction: column;
+    max-width: 1597px;
+    height: 1418px;
+    top: 6966px;
+    left: 161px;
+    gap: 80px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.Our-Pricing-container-Title{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.Our-Pricing-Title{
+    display: flex;
+    flex-direction: column;
+    width: 1025px;
+    height: 132px;
+    gap: 6px;
+}
+
+.Our-Pricing-Title > h2{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 150%;
+}
+
+.Our-Pricing-Title > p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.Our-Pricing-Times{
+    display: flex;
+    align-self: flex-end;
+    margin-top: auto;
+    height: 79px;
+    border-radius: 8px;
+    padding: 12px;
+    background: white;
+
+
+
+}
+
+.Our-Pricing-Times > button:first-of-type{
+    width: 132px;
+    height: 55px;
+    border-radius: 6px;
+    padding: 14px 30px;
+    background: #FF9500;
+}
+
+.Our-Pricing-Times > button:first-of-type > a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.Our-Pricing-Times > button:last-of-type{
+    width: 132px;
+    height: 55px;
+    border-radius: 6px;
+}
+
+.Our-Pricing-Times > button:last-of-type > a{
+    text-decoration: none;
+    color: #4C4C4D;
+}
+
+.Our-Pricing-Container-List{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1597px;
+    height: 1206px;
+    gap: 30px;
+    border-radius: 12px;
+    padding: 80px;
+    background: white;
+}
+
+.Our-Pricing-List-One,
+.Our-Pricing-List-Two{
+    display: flex;
+    flex-direction: column;
+    width: 703px;
+    height: 1046px;
+    gap: 50px;
+    border-radius: 12px;
+    padding: 50px 30px 30px 30px;
+    border: 1px solid #F1F1F3;
+    background: #FCFCFD;
+}
+
+.Our-Pricing-Banner{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    width: 643px;
+    height: 61px;
+    gap: 10px;
+    border-radius: 6px;
+    padding: 12px 22px;
+    border: 1px solid #FFEACC;
+    background: #FFF9F0;
+
+}
+
+.Our-Pricing-Banner > p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 169%;
+    text-align: center;
+}
+
+.Pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pricing > span:first-of-type{
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 73%;
+    max-width: 157px;
+    height: 58px;
+    color: #262626;
+}
+
+.Pricing-List{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 643px;
+    height: 680px;
+    gap: 30px;
+    padding: 40px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border: 1px solid #F1F1F3;
+    background: #FFFFFF;
+
+}
+.Pricing-List-Container{
+    width: 563px;
+    height: 540px;
+    gap: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.Pricing-List > p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.Option{
+    width: 503px;
+    height: 60px;
+    gap: 12px;
+    border-radius: 8px;
+    padding: 14px;
+    border: 1px solid #F1F1F3;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.Option > span{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #4C4C4D;
+    position: relative;
+    top: 4px;
+}
+
+.Our-Pricing-button{
+    width: 643.5px;
+    height: 67px;
+    gap: 8px;
+    padding: 20px 24px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid #FF9500;
+    background: #FF9500;
+}
+
+.Our-Pricing-button > a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+}

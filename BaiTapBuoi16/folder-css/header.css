@@ -1,0 +1,178 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 100;
+    background-color: #F7F7F8;
+    display: block;
+
+}
+.container-header {
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #FF9500;
+    height: 55px;
+    border-radius: 8px;
+}
+.header-top > span{
+    height: 27px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+
+}
+
+.container-header-bottom {
+    width: 100%;
+    max-width: 1860px;
+    height: 99px;
+    display: flex;
+    padding: 20px 132px 24px 132px;
+    border-bottom: 1px solid #F1F1F3;
+    margin: 0 auto;
+
+
+}
+
+/*----------logo--------*/
+.logo{
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: #FF9500;
+    border-radius: 8px;
+    padding: 30px;
+}
+.logo > img{
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.header-bottom{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.Navigation {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+
+/*------------menu------------*/
+.Navigation nav ul{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 26px;
+    list-style: none;
+    margin-left: 40px;
+}
+
+.Navigation nav ul li a{
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #262626;
+    display: block;
+    padding: 14px 20px;
+}
+
+.Navigation nav ul li{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Navigation nav ul li a:hover{
+    font-size: 18px;
+}
+.Navigation nav ul li:hover{
+    background: #F1F1F3;
+    border-radius: 8px;
+}
+
+/*--------------Action-------------*/
+.Login-Register{
+    flex-shrink: 0;
+    display: flex;
+    width: 214px;
+    height: 55px;
+    opacity: 1;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Login-Register > label:nth-of-type(2){
+    width: 117px;
+    height: 55px;
+    opacity: 1;
+    gap: 8px;
+    background: #FF9500;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
