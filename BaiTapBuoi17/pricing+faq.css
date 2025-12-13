@@ -1,0 +1,289 @@
+/*pricing*/
+#pricing .title__button{
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px;
+}
+#pricing .title .title__button button{
+    border-radius: 6px;
+    padding: 14px 30px;
+    /*color: #4C4C4D;*/
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    border: none;
+}
+.title__button button:first-child{
+    background-color: #FF9500;
+    color: white;
+    width: 132px;
+}
+.title__button button:last-child{
+    color: #4C4C4D;
+    background-color: white;
+    /*width: 132px;*/
+}
+.pricing{
+    display: flex;
+    /*margin: auto;*/
+    justify-content: center;
+    margin:80px auto 150px auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 80px;
+    gap: 30px;
+}
+.pricing__item{
+    background-color: #FCFCFD;
+    border-radius: 12px;
+    border: 1px #F1F1F3 solid;
+    padding: 50px 30px 30px 30px;
+    gap: 50px;
+    flex: 1;
+}
+.available__features{
+    background-color: #FFFFFF;
+    border-radius: 14px 14px 0 0;
+    border: 1px #F1F1F3 solid;
+    padding: 40px;
+    gap: 30px;
+
+}
+.pricing__item button{
+    background-color: #FF9500;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 24px;
+    gap: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    max-width: 643px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+.available__features--item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px #F1F1F3 solid;
+    padding: 14px;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.available__features div:last-child{
+    margin-bottom: 0;
+}
+.available__features--item p{
+    color: #4C4C4D;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.available__features--item img{
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    padding: 6px;
+    gap: 10px;
+}
+.pricing__item > div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #FFEACC;
+    background-color: #FFF9F0;
+    padding: 12px 22px;
+    gap: 10px;
+}
+.pricing__item > div:first-child p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 169%;
+    color: #262626;
+}
+.pricing__item > div:nth-child(2){
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pricing__item > div:nth-child(2) p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+    color: #4C4C4D;
+}
+.pricing__item > div:nth-child(2) p strong{
+    font-size: 80px;
+    line-height: 1;
+    color: #262626;
+    font-weight: 600;
+}
+.available__features div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #262626;
+    margin-bottom: 30px;
+}
+
+
+/*FAQ*/
+.faq{
+    display: flex;
+    /*gap: 120px;*/
+    justify-content: center;
+    border-radius: 12px;
+    padding: 100px;
+    background-color: white;
+}
+.faq > div:first-child{
+    max-width: 408px;
+    margin-right: 120px;
+    flex: 1;
+    /*min-width: 300px;*/
+}
+.faq h2{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #262626;
+}
+.faq h2 + p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333333;
+}
+.faq div:first-child > div > button{
+    margin-top: 50px;
+    border-radius: 8px;
+    border: 1px #F1F1F3 solid;
+    padding: 18px 24px;
+    gap: 8px;
+    background-color: white;
+    color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.questions{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 867px;
+    flex: 1;
+    min-width: 0;
+}
+.faq__item {
+    /*text-align: left;*/
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    /*margin-bottom: 1.5rem;*/
+    overflow: hidden;
+    padding: 30px 50px;
+    gap: 30px;
+    border: 1px solid #F1F1F3;
+}
+.faq__label{
+    /*width: 867px;*/
+    /*width: 100%;*/
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
+.icon__plus, .icon__close{
+    width: 52px;
+    height: 52px;
+    border: none;
+}
+.icon__close{
+    display: none;
+}
+.faq__label > p{
+    font-weight: 500;
+    font-size: 20px;
+    color: #262626;
+    line-height: 150%;
+}
+.faq__content{
+    display: none;
+}
+
+.inner__text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #4C4C4D;
+    border-top: 1px solid #F1F1F3;
+    padding: 50px 0 50px 0;
+}
+
+.inner__bottom{
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    gap: 30px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    background-color: #F7F7F8;
+    justify-content: space-between;
+}
+.inner__bottom > div > p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #333333;
+}
+.inner__bottom a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 0;
+    background-color: white;
+    background-image: url("/BaiTapBuoi17/icons/arrow-right-icon.svg");
+    color: #4C4C4C;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 56px;
+    height: 56px;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+input[type="checkbox"]:checked ~ .faq__label .icon__plus {
+    display: none;
+}
+input[type="checkbox"]:checked ~ .faq__label .icon__close {
+    display: flex;
+}
+input[type="checkbox"]:checked ~ .faq__content{
+    display: block;
+}
+/*.faq__label label button{*/
+/*    padding: 12px;*/
+/*    border-radius: 8px;*/
+/*    gap: 10px;*/
+/*    background-color: #FFF4E5;*/
+/*}*/
+/*.faq__label label button img{*/
+/*    color: #262626;*/
+/*}*/

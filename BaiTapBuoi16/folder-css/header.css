@@ -80,7 +80,6 @@ header {
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
 }
 
@@ -132,7 +131,7 @@ header {
     align-items: center;
 
 }
-.Login-Register > label:nth-of-type(2){
+.Login-Register > button:nth-of-type(2){
     width: 117px;
     height: 55px;
     opacity: 1;

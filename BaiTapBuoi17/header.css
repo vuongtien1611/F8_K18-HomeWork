@@ -1,0 +1,124 @@
+.header__fixed{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F7F7F8;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header__top{
+    /*position: relative;*/
+    /*top: 96px;*/
+    background-color: #FF9500;
+    height: 55px;
+    /*border-radius: 8px;*/
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header__top a{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: white;
+}
+#header__top img{
+    margin-left: 23px;
+}
+#header__bottom{
+    /*max-width: 1596px;*/
+    width: 1596px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #F1F1F3;
+}
+#header__bottom div{
+    display: flex;
+    align-items: center;
+    /*flex: 1;*/
+    flex-shrink: 1;
+}
+#header__bottom nav{
+    margin-left: 50px;
+}
+#header__-logo{
+    height: 54px;
+    width: 54px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 8px;
+}
+#header__bottom ul{
+    display: flex;
+}
+#header__top{
+    margin: 20px 30px;
+    border-radius: 8px;
+}
+#header__bottom ul li a{
+    text-decoration: none;
+    color: #262626;
+    line-height: 150%;
+    font-weight: 400;
+}
+#header__bottom ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+
+}
+#header__bottom ul li:hover {
+    background-color: #F1F1F3;
+    /*flex: 1.2;*/
+}
+.header__-action{
+    display: flex;
+    gap: 20px;
+}
+.header__-action a{
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 34px;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #262626;
+    background-color: #F7F7F8;
+}
+.header__-action > div > a:last-child{
+    background-color: #FF9500;
+    color: white;
+}
+.header__-action label{
+    display: none;
+    background-image: url("//icons/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 34px;
+    height: 34px;
+}
+.menu__form{
+    display: none;
+}
+
+.menu{
+    display: none;
+}

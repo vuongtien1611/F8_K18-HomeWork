@@ -1,0 +1,163 @@
+.banner__title{
+    margin: 100px auto;
+    width: 965px;
+}
+.banner__top{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCFCFD;
+    color: #1A1A1A;
+    /*width: 854px;*/
+    gap: 10px;
+    border-radius: 11px;
+    /*font-size: 48px;*/
+    padding: 14px 30px 14px 20px;
+    margin: auto;
+    flex-shrink: 1;
+}
+.banner__top > div:first-child{
+    background-image: url("/BaiTapBuoi17/icons/Abstract Line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 39px;
+    height: 43px;
+    position: absolute;
+    left: -24px;
+    top: -26px;
+}
+.banner__top h1{
+    font-size: 48px;
+}
+.banner__top h1 > span{
+    color: #FF9500;
+}
+.banner__top > img{
+    width: 62px;
+    height: 62px;
+    border-radius: 6px;
+}
+.banner__description{
+    gap: 10px;
+    margin: 20px 0 60px 0;
+    padding: 0 30px;
+}
+.banner__description div{
+    display: flex;
+    justify-content: center;
+}
+.banner__description div:first-child{
+    max-width: 965px;
+    color: #262626;
+    font-size: 38px;
+    font-weight: 500;
+}
+.banner__description div:last-child{
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.banner__action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.banner__action a{
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.banner__action a:first-child{
+    /*width: 195px;*/
+    padding: 18px 24px;
+    color: white;
+    background-color: #FF9500;
+}
+.banner__action a:last-child{
+    /*width: 159px;*/
+    padding: 18px 24px;
+    color: #262626;
+    background-color: #FFFFFF;
+}
+.banner__bottom{
+    margin: 0 auto;
+    max-width: 1596px;
+    /*width: 100%;*/
+}
+.banner__container{
+    display: flex;
+    /*justify-content: space-between;*/
+    /*justify-content: ;*/
+    align-items: center;
+    background-color: #FCFCFD;
+    border-radius: 12px;
+    border: 1px solid #F1F1F3;
+    padding: 30px;
+    /*width: 100%;*/
+    /*flex-shrink: 1;*/
+}
+.banner__container--item{
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 30px 40px;
+    border-right: 1px solid #F1F1F3;
+}
+.banner__container--item:last-child{
+    border-right: none;
+}
+.banner__container--item div img{
+    color: #4C4C4D;
+}
+.banner__container--image{
+    position: relative;
+    flex: 1;
+}
+.banner__container--image > img{
+    position: relative;
+    background-size: cover;
+    border-radius: 12px;
+    flex-shrink: 1;
+    margin: 100px auto 0 auto;
+}
+
+/* Nút pause */
+.banner__container--image > button {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: 30px;
+    left: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* Vòng tròn */
+.circle__pause {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #FFFFFF33;
+    border: 6px solid #FFFFFF4D;
+    z-index: 1;
+    top: 30px;
+    background-position: center;
+}
