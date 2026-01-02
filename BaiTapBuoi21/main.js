@@ -85,12 +85,8 @@
     // This happens because myLaptop and laptop both reference the same memory address
     // (const myLaptop = laptop;). Therefore, when myLaptop.brand = "Apple" is modified, the value of laptop.brand is also updated.
 
-    // Similarly, mySpec and laptop.spec reference the same nested object in memory
+    // Similarly, mySpec and laptop.spec reference the same nested object in memory,
     // (const mySpec = laptop.spec;). As a result, when mySpec.ram = "16GB" is changed, the value of laptop.spec.ram is changed as well.
-
-
-
-
 
 
 
