@@ -31,23 +31,26 @@ classifyScore(4.9);
 
 
 //==================Lesson Two===============//
-function  getDaysInMonth(month){
-    switch (true) {
-        case month < 1 || month > 12:
-            console.log("Invalid month")
-            break;
-        case month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12:
-            console.log("31 days")
-            break;
-        case month === 2:
-            console.log("28 days")
-            break;
+function getDaysInMonth(month) {
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            return 31
+
+        case 4: case 6: case 9: case 11:
+            return 30
+
+        case 2:
+            return 28
+
         default:
-            console.log("30 days")
+            return null
     }
 }
 
-getDaysInMonth(1)
+
+const days = getDaysInMonth(12)
+
+console.log(days !== null ? days + " days" : "Invalid month")
 
 
 
