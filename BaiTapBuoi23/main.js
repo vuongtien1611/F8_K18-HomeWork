@@ -39,7 +39,7 @@ function getTriangle(a, b, c) {
 getTriangle(1, 2, 3)
 
 
-//=================================Exercied 2===========================//
+//=================================Exercise 2===========================//
 
 function isPerfectSquare(a) {
     if (a < 0) {
