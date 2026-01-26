@@ -52,8 +52,6 @@ function createOrder(productId, orderQty) {
 }
 
 
-
-
 function updateOrder(orderId, newQty) {
     if (newQty == null || newQty <= 0) {
         console.log("Invalid quantity")
