@@ -1,3 +1,11 @@
+interface EmployeeI{
+    id: number
+    name: string
+    salary: number
+    hoursWorked: number
+}
+
+
 
 const partTime = {
     id: 2,
