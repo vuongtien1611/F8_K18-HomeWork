@@ -7,7 +7,7 @@ interface EmployeeI{
 
 
 
-const partTime = {
+const partTime: EmployeeI = {
     id: 2,
     name: "Binh",
     salary: 20,
@@ -17,7 +17,7 @@ const partTime = {
 
 
 
-const newPartTime = {
+const newPartTime: EmployeeI = {
     ...partTime,
     hoursWorked: 45
 }
