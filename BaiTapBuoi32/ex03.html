@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo the input</title>
+</head>
+<body>
+    <label for="inputText">nhap noi dung</label>
+    <input type="text" id="inputText">
+    <button id="addBtn">Add</button>
+    <ul id="List"></ul>
+<script>
+    const input = document.getElementById('inputText')
+    const addBtn = document.getElementById('addBtn')
+    const list = document.getElementById('List')
+
+    addBtn.addEventListener('click', () => {
+        const value = input.value // take text in input
+
+        const liE = document.createElement('li')
+        liE.textContent = value
+        list.appendChild(liE)
+        input.value = '' // clear input
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Item</title>
+</head>
+<body>
+<button id="addItem">Add item</button>
+
+<ul id="List"></ul>
+
+<script>
+    const addItem = document.getElementById('addItem')
+    const List = document.getElementById('List')
+
+    let count = 0
+    addItem.addEventListener('click', () => {
+        count++
+
+        const liE = document.createElement('li')
+        liE.textContent = `Item ${count}`
+
+        List.appendChild(liE)
+    })
+
+</script>
+
+</body>
+</html>

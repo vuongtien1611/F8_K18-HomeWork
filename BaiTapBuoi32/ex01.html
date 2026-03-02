@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Paragraph</title>
+</head>
+<body>
+<button id="add-Btn">Add Paragraph</button>
+
+<div id="content"></div>
+
+<script>
+ const addBtn = document.getElementById('add-Btn')
+ const content = document.getElementById('content')
+
+ addBtn.addEventListener('click', () => {
+   const pE = document.createElement('p')
+   pE.textContent = "Hello DOM"
+   addBtn.appendChild(pE)
+ })
+
+</script>
+</body>
+</html>

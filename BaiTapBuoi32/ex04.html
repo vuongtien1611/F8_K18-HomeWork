@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-do mini</title>
+</head>
+<body>
+    <label for="inputText">Nhập Công Việc Cần Làm: </label>
+    <input type="text" id="inputText">
+    <button id="Btn-add">Add</button>
+    <ul id="list"></ul>
+
+<script>
+    const inputE = document.getElementById('inputText')
+    const list = document.getElementById("list")
+    const add = document.getElementById('Btn-add')
+
+    add.addEventListener('click', () => {
+        const value = inputE.value
+        if (value.trim() === '') {
+            return
+        }
+
+        const liE = document.createElement('li')
+        liE.textContent = value
+        list.append(liE)
+        inputE.value = ''
+    })
+
+</script>
+</body>
+</html>

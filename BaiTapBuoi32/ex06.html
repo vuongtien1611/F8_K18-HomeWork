@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Item</title>
+  <style>
+    li {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      gap: 10px;
+    }
+
+    .close-btn {
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <input type="text" id="inputText" />
+  <button id="btn-add">Add</button>
+  <ul id="list"></ul>
+
+
+<script>
+const input = document.getElementById("inputText")
+const btnAdd = document.getElementById("btn-add")
+const ul = document.getElementById('list')
+
+btnAdd.addEventListener("click", () => {
+  const value = input.value.trim()
+  if (!value) return
+
+  const li = document.createElement("li")
+
+  const span = document.createElement("span")
+  span.textContent = value
+
+  const btn = document.createElement("button")
+  btn.textContent = "X"
+  btn.className = "close-btn"
+
+  li.append(span, btn)
+  ul.append(li)
+
+  input.value = ""
+})
+
+
+ul.addEventListener("click", (e) => {
+  if (e.target.classList.contains("close-btn")) {
+    e.target.parentElement.remove()
+  }
+})
+
+</script>
+</body>
+</html>

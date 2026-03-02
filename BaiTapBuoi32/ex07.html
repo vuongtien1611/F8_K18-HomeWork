@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        li{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .close-Btn{
+            cursor: pointer;
+        }
+
+        .completed{
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+<body>
+<input type="text" id="inputText">
+<button id="btn">Add</button>
+<ul id="list"></ul>
+
+<script>
+    const inputText = document.getElementById('inputText')
+    const btn = document.getElementById('btn')
+    const ul = document.getElementById('list')
+
+    btn.addEventListener('click', () => {
+        if(inputText.value.trim()){
+            const liE = document.createElement('li')
+
+            const text = document.createElement('span')
+            text.textContent = inputText.value
+
+            const closeBtn = document.createElement('span')
+            closeBtn.textContent = 'X'
+            closeBtn.classList.add('close-Btn')
+
+
+            liE.append(text, closeBtn)
+            ul.append(liE)
+        }
+        inputText.value = ''
+    })
+
+    ul.addEventListener('click', (e) => {
+
+        if(e.target.tagName === 'SPAN'){   // Click on the text -> toggle strikethrough
+            if(!e.target.classList.contains('close-Btn')){
+                e.target.classList.toggle('completed')
+            }
+        }
+
+        if(e.target.classList.contains('close-Btn')){ // Click the X button → delete the todo
+            e.target.parentElement.remove()
+            return
+        }
+    })
+
+
+</script>
+
+
+</body>
+</html>

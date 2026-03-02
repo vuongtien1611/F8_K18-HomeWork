@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        li.selected {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="inputText">
+<button id="btn">Add</button>
+<ul id="list"></ul>
+
+<script>
+    const input = document.getElementById('inputText')
+    const btn = document.getElementById('btn')
+    const ul = document.getElementById('list')
+
+    btn.addEventListener('click', () =>{
+        if(input.value.trim()){
+            const liE = document.createElement('li')
+            liE.textContent = input.value
+            ul.append(liE)
+        }
+        input.value = ''
+
+    })
+
+    ul.addEventListener('click', (e) =>{
+        if(e.target.tagName === 'LI'){
+            const activeItem = ul.querySelector('.selected')
+            if(activeItem){
+                activeItem.classList.remove('selected')
+            }
+            e.target.classList.add('selected')
+        }
+    })
+</script>
+</body>
+</html>

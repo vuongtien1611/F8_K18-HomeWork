@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ex09</title>
+</head>
+<style>
+  .todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .todoCompleted {
+    text-decoration: line-through;
+  }
+
+  .actionGroup {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-warning {
+    background-color: yellow;
+  }
+
+  .btn-danger {
+    background-color: red;
+  }
+
+  .btn-success {
+    background-color: green;
+  }
+</style>
+<body>
+<main style="display:flex; gap:100px">
+
+  <!-- Todo -->
+  <div>
+    <input id="todoInput">
+    <button id="addTodoBtn">Add</button>
+    <ul id="todoList"></ul>
+  </div>
+
+  <!-- Search -->
+  <div>
+    <input id="searchTodoInput">
+    <label for="filterDoneCheckbox">Done</label>
+    <input id="filterDoneCheckbox" type="checkbox">
+    <ul id="filteredTodoList"></ul>
+  </div>
+
+</main>
+
+<script>
+  const todoInput = document.getElementById("todoInput");
+  const addTodoBtn = document.getElementById("addTodoBtn");
+  const todoList = document.getElementById("todoList");
+
+  const searchTodoInput = document.getElementById("searchTodoInput");
+  const filterDoneCheckbox = document.getElementById("filterDoneCheckbox");
+  const filteredTodoList = document.getElementById("filteredTodoList");
+
+  function createTodoItem(value) {
+    const li = document.createElement("li");
+    li.classList.add("todoItem");
+
+    const text = document.createElement("span");
+    text.textContent = value;
+
+    const actionGroup = document.createElement("div");
+    actionGroup.classList.add("actionGroup");
+
+    const doneBtn = document.createElement("button");
+    doneBtn.textContent = "Done";
+    doneBtn.classList.add("btn-warning");
+
+    doneBtn.addEventListener("click",  () => {
+      doneBtn.classList.toggle("btn-success");
+      text.classList.toggle("todoCompleted");
+      renderSearch();
+    });
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("btn-danger");
+
+    deleteBtn.addEventListener("click", () => {
+      li.remove();
+      renderSearch();
+    });
+
+    actionGroup.append(doneBtn, deleteBtn);
+    li.append(text, actionGroup);
+
+    return li;
+  }
+
+  addTodoBtn.addEventListener("click",() => {
+    if (todoInput.value.trim()) {
+      const newItem = createTodoItem(todoInput.value);
+      todoList.append(newItem);
+      renderSearch();
+    }
+
+    todoInput.value = "";
+    todoInput.focus();
+  });
+
+  function renderSearch() {
+    const keyword = searchTodoInput.value.toLowerCase();
+    const onlyDone = filterDoneCheckbox.checked;
+
+    const items = todoList.querySelectorAll("li");
+    filteredTodoList.innerHTML = "";
+
+    items.forEach(function (item) {
+      const span = item.querySelector("span");
+      const text = span.textContent;
+
+      const isMatch = text.toLowerCase().includes(keyword);
+      const isDone = span.classList.contains("todoCompleted");
+
+      if (isMatch && (!onlyDone || isDone)) {
+        const li = document.createElement("li");
+        li.textContent = text;
+        filteredTodoList.append(li);
+      }
+    });
+  }
+
+  searchTodoInput.addEventListener("input", renderSearch);
+  filterDoneCheckbox.addEventListener("change", renderSearch);
+</script>
+
+</body>
+</html>
