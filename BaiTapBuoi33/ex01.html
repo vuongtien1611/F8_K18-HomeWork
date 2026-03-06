@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h2>Login</h2>
+<label for="username">Username: </label>
+<input type="text" id="username" name="username" placeholder="Enter Username">
+<br><br>
+<label for="password">Password: </label>
+<input type="password" id="password" name="password" placeholder="Enter Password">
+<br><br>
+<button id="LoginBtn">Login</button>
+<p id="message"></p>
+
+<script>
+
+    function login(username, password){
+        return new Promise((resolve, reject) =>{
+          setTimeout(()=>{
+              if(username === 'admin' && password === '123456'){
+                  resolve({
+                      id: 1,
+                      username: "admin",
+                      role: "ADMIN"
+                  })
+              }
+              else{
+                  reject('Sai tài khoản hoặc mật khẩu')
+              }
+
+          }, 2000)
+
+        })
+    }
+
+    const btn = document.getElementById('LoginBtn')
+    const usernameInput = document.getElementById('username')
+    const passwordInput = document.getElementById('password')
+    const message = document.getElementById("message")
+
+    usernameInput.addEventListener('keypress', (event) => {
+        if (event.key === "Enter") {
+            btn.click()
+        }
+    })
+
+    passwordInput.addEventListener('keypress', (event) => {
+        if(event.key === 'Enter'){
+            btn.click()
+        }
+    })
+
+    btn.addEventListener('click', () => {
+
+        const password = passwordInput.value
+        const username = usernameInput.value
+
+        console.log("Đang gửi request đăng nhập...")
+        message.textContent = 'Đang gửi request đăng nhập...'
+        login(username, password)
+            .then((user)=>{
+                console.log('Đăng nhập thành công')
+                console.log('user: ', user)
+
+                message.textContent = 'đăng nhập thành công.'
+            })
+
+            .catch((err)=>{
+                console.log('Lỗi: ', err)
+                message.textContent = err
+        })
+
+    })
+</script>
+</body>
+</html>

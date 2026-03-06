@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label for="countDown">Nhập thời gian cần đếm: </label>
+<input type="number" id="countDown" name="countDown">
+<button id="btn">Bắt Đầu Đếm</button>
+
+<p id="message"></p>
+
+<script>
+    function startCountdown(seconds) {
+        const message = document.getElementById('message')
+        const time = setInterval(() => {
+            console.log(seconds)
+            message.textContent = seconds
+            seconds--
+
+            if (seconds < 0) {
+                console.log('hết giờ!')
+                message.textContent = 'Hết giờ!'
+                clearInterval(time)
+            }
+        }, 1000)
+    }
+
+    const btn = document.getElementById('btn')
+    const countdown = document.getElementById('countDown')
+    btn.addEventListener('click', () => {
+        const seconds = Number(countdown.value)
+        startCountdown(seconds)
+    })
+
+    countdown.addEventListener("keydown", (event) => {
+
+        if (event.key === "Enter") {
+            const seconds = Number(countdown.value)
+            startCountdown(seconds)
+        }
+    })
+</script>
+</body>
+</html>

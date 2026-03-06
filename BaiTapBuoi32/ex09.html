@@ -1,3 +1,27 @@
+<!--Todo nâng cao (chỉ DOM cơ bản)-->
+
+<!--Giao diện-->
+
+<!--Có 1 thể input và 1 nút add-->
+
+<!--Danh sách các việc cần làm hiên thị trong ul li-->
+
+<!--Bên cách các tên công việc có nút done (backgroud mặc đinh là vàng), 1 nút delete (màu đỏ)-->
+
+<!--nếu click vào done thì nút done chuyển sang màu xanh-->
+
+<!--click lại thì chuyển sang màu vàng-->
+
+<!--click vào nút delete thì xóa công việc đó đi-->
+
+<!--Thêm 1 nút input khác để search tên công việc đã thêm-->
+
+<!--Thêm 1 checkbox với label là done. nếu tick vào đó thì chỉ hiện thị công việc đã done-->
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -88,8 +112,12 @@
     deleteBtn.classList.add("btn-danger");
 
     deleteBtn.addEventListener("click", () => {
-      li.remove();
-      renderSearch();
+     if( confirm("Are you sure?")){
+       li.remove();
+
+       renderSearch();
+     }
+
     });
 
     actionGroup.append(doneBtn, deleteBtn);
