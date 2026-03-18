@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts CRUD</title>
+</head>
+<body>
+
+<h1>Danh sách bài viết</h1>
+
+<button id="addBtn">Thêm bài</button>
+
+<ol id="postList"></ol>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+    const API = "https://dummyjson.com/posts";
+
+    let posts = [];
+
+    const listEl = document.getElementById("postList");
+
+    /* ================= RENDER ================= */
+    function renderPosts(data){
+        listEl.innerHTML = data.map(post => `
+        <li>
+            <p>${post.title}</p>
+            <button onclick="viewDetail(${post.id})">Chi tiết</button>
+            <button onclick="editPost(${post.id})">Sửa</button>
+            <button onclick="deletePost(${post.id})">Xoá</button>
+        </li>
+    `).join('');
+    }
+
+    function viewDetail(id){
+        window.location.href = "detail.html?id=" + id;
+    }
+
+    /* ================= GET ================= */
+    async function fetchPosts(){
+
+        const localData = localStorage.getItem("posts");
+
+        if(localData){
+            posts = JSON.parse(localData);
+            renderPosts(posts);
+            return;
+        }
+
+        const res = await axios.get(API);
+        posts = res.data.posts;
+
+        localStorage.setItem("posts", JSON.stringify(posts));
+
+        renderPosts(posts);
+    }
+    /* ================= CREATE ================= */
+    document.getElementById("addBtn").onclick = async () => {
+        const title = prompt("Nhập tiêu đề:");
+        if(!title) return;
+
+        await axios.post(API + "/add", {
+            title,
+            userId: 1
+        });
+
+        const newPost = {
+            id: Date.now(),
+            title,
+            body: "Nội dung tạm"
+        };
+
+        posts.unshift(newPost);
+        localStorage.setItem('posts', JSON.stringify(posts));
+        renderPosts(posts);
+    };
+
+    /* ================= UPDATE ================= */
+    async function editPost(id){
+
+        const post = posts.find(p => p.id === id);
+
+        const newTitle = prompt("Sửa tiêu đề:", post.title);
+        if(!newTitle) return;
+
+        if(id < 1000){
+            await axios.put(API + "/" + id, {
+                title: newTitle
+            });
+        }
+
+        posts = posts.map(p =>
+            p.id === id ? {...p, title: newTitle} : p
+        );
+        localStorage.setItem('posts', JSON.stringify(posts));
+        renderPosts(posts);
+    }
+    /* ================= DELETE ================= */
+    async function deletePost(id){
+
+        const confirmDelete = confirm("Bạn chắc chắn muốn xoá?");
+        if(!confirmDelete) return;
+
+        if(id < 1000){
+            await axios.delete(API + "/" + id);
+        }
+
+        posts = posts.filter(p => p.id !== id);
+        localStorage.setItem("posts", JSON.stringify(posts));
+
+        renderPosts(posts);
+    }
+
+    fetchPosts();
+</script>
+
+</body>
+</html>
