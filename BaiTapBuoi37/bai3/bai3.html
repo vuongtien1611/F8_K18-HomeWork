@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Giỏ hàng (<span id="count">0</span>)</h2>
+<button onclick="clearCart()">Xóa giỏ hàng</button>
+
+<h3>Danh sách sản phẩm</h3>
+<div id="product-list"></div>
+
+<h3>Sản phẩm trong giỏ</h3>
+<div id="cart-list"></div>
+
+<script>
+  // Danh sách sản phẩm
+  const products = [
+    { id: 1, name: "Áo", price: 100000 },
+    { id: 2, name: "Quần", price: 200000 },
+    { id: 3, name: "Giày", price: 3000000 }
+  ];
+
+  // Lấy giỏ hàng từ sessionStorage
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+
+  // Render sản phẩm
+  function renderProducts() {
+    const productList = document.getElementById("product-list");
+
+    productList.innerHTML = products.map(p => `
+  <div>
+    ${p.name} - ${formatMoney(p.price)}
+    <button onclick="addToCart(${p.id})">Thêm</button>
+  </div>
+`).join("");
+  }
+
+  // Thêm vào giỏ
+  function addToCart(id) {
+    const product = products.find(p => p.id === id);
+
+    const exist = cart.find(item => item.id === id);
+
+    if (exist) {
+      exist.quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+
+    saveCart();
+    renderCart();
+  }
+
+  // Lưu sessionStorage
+  function saveCart() {
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  // Render giỏ hàng
+  function renderCart() {
+    const cartList = document.getElementById("cart-list");
+    const count = document.getElementById("count");
+
+    count.innerText = cart.length;
+
+    if (cart.length === 0) {
+      cartList.innerHTML = "<p>Chưa có sản phẩm</p>";
+      return;
+    }
+
+    cartList.innerHTML = cart.map(item => `
+    <div>
+      ${item.name} - SL: ${item.quantity}
+    </div>
+  `).join("");
+  }
+
+  // Xóa giỏ hàng
+  function clearCart() {
+    cart = [];
+    sessionStorage.removeItem("cart");
+    renderCart();
+  }
+  const formatMoney = (number) => {
+    return number.toLocaleString('vi-VN') + 'đ';
+  };
+
+  renderProducts();
+  renderCart();
+</script>
+</body>
+</html>
