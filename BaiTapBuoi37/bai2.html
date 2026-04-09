@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bộ đếm truy cập</title>
+</head>
+<body>
+<h1>Chào mừng bạn đến với trang web!</h1>
+
+<p id="counterDisplay">Bạn đã truy cập trang này 0 lần.</p>
+
+<button id="btnReset">Reset bộ đếm</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const counterDisplay = document.querySelector('#counterDisplay');
+        const btnReset = document.querySelector('#btnReset');
+
+        // --- 1. Xử lý tăng bộ đếm khi tải trang ---
+
+        // Lấy giá trị hiện tại từ localStorage (trả về chuỗi hoặc null)
+        let currentCount = localStorage.getItem('visitCount');
+
+        // Nếu là lần đầu tiên (null), đặt là 0. Nếu có rồi thì chuyển sang kiểu số (Number)
+        currentCount = currentCount ? Number(currentCount) : 0;
+
+        currentCount++;
+
+        // Lưu giá trị mới vào localStorage
+        localStorage.setItem('visitCount', currentCount);
+
+        // Hiển thị ra màn hình
+        counterDisplay.textContent = `Bạn đã truy cập trang này ${currentCount} lần.`;
+
+
+        // sự kiện Reset
+
+        btnReset.addEventListener('click', () => {
+            localStorage.setItem('visitCount', 0);
+            counterDisplay.textContent = `Bạn đã truy cập trang này 0 lần.`;
+            alert('Bộ đếm đã được đặt lại về 0!');
+        });
+    });
+</script>
+</body>
+</html>

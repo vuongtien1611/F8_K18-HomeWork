@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý LocalStorage</title>
+</head>
+<body>
+<input id="Username" placeholder="User...">
+<button id="saveName">Lưu</button>
+<button id="readName">đọc</button>
+
+<p>Tên hiện tại: <strong id="displayName"></strong></p>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const inputE = document.querySelector('#Username');
+        const btnSave = document.querySelector('#saveName');
+        const btnRead = document.querySelector('#readName');
+        const displayName = document.querySelector('#displayName');
+
+        // sự kiện lưu
+        btnSave.addEventListener('click', () => {
+            const name = inputE.value.trim();
+            if(name){
+                localStorage.setItem('userName', name)
+                alert('Đã Lưu: ' + name)
+            }
+            else{
+                alert('vui lòng nhập tên người dùng')
+            }
+        })
+        // sự kiện đọc
+        btnRead.addEventListener('click', () => {
+            const saveName = localStorage.getItem('userName')
+            if(saveName){
+               displayName.textContent = saveName
+            }
+            else{
+                displayName.textContent = 'không tìm thấy tên người dùng'
+            }
+        })
+        const initialName = localStorage.getItem('userName')
+        if(initialName){
+            displayName.textContent = initialName
+        }
+    })
+</script>
+</body>
+</html>
