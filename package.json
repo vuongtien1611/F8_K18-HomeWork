@@ -1,0 +1,24 @@
+{
+  "name": "f8_k18-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuongtien1611/F8_K18-HomeWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vuongtien1611/F8_K18-HomeWork/issues"
+  },
+  "homepage": "https://github.com/vuongtien1611/F8_K18-HomeWork#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
