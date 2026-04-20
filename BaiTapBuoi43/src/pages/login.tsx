@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
   Container, Box, TextField, Button, Typography,
-  Paper, Avatar, Alert, CircularProgress
+  Paper, Alert, CircularProgress
 } from '@mui/material';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 
