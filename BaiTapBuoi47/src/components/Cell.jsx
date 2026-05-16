@@ -1,67 +1,111 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import { TableCell, InputBase, Box } from '@mui/material';
+import { Context } from './Store';
 
-const Cell = React.memo(({ value, rowIndex, colIndex, isActive, isEditing, onSelect, onStartEdit, onEndEdit, onChange }) => {
-  const inputRef = useRef(null);
+const Cell = React.memo(({ value, rowIndex, colIndex, onChange, onEndEdit }) => {
+  const { activeCell, setActiveCell, isEditing, setIsEditing, setSelection, selection } = useContext(Context);
   const cellRef = useRef(null);
+  const inputRef = useRef(null);
+
+  const isActive = activeCell?.r === rowIndex && activeCell?.c === colIndex;
+  const isEditingThis = isActive && isEditing;
 
   useEffect(() => {
-    if (isEditing && inputRef.current)
-      inputRef.current.focus();
-  }, [isEditing]);
-
-  useEffect(() => {
-    if (isActive && !isEditing && cellRef.current)
-      cellRef.current.focus();
-  }, [isActive, isEditing]);
+    if (isActive) {
+      if (isEditingThis && inputRef.current) {
+        inputRef.current.focus();
+      } else if (cellRef.current) {
+        cellRef.current.focus();
+      }
+    }
+  }, [isActive, isEditingThis]);
 
   const handleKeyDown = (e) => {
-    if (!isEditing) {
-      if (e.key.length === 1) {
-        onStartEdit();
-      } else if (e.key === 'Enter') {
+    const isArrowKey = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key);
+
+    if (e.key === 'Enter' || e.key === 'Tab') {
+      e.preventDefault();
+      e.stopPropagation();
+      onEndEdit('enter');
+      return;
+    }
+
+    if (isEditing) {
+      if (isArrowKey) {
         e.preventDefault();
-        onEndEdit('right');
+        e.stopPropagation();
+        const direction = e.key.replace('Arrow', '').toLowerCase();
+        onEndEdit(direction);
+        return;
       }
-    } else {
-      if (e.key === 'Enter') {
+
+      if (e.key === 'Escape') {
+        setIsEditing(false);
+        cellRef.current?.focus();
+      }
+    }
+    else {
+      if (isArrowKey) {
         e.preventDefault();
-        onEndEdit('right');
+        const direction = e.key.replace('Arrow', '').toLowerCase();
+        onEndEdit(direction);
+      } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+        setIsEditing(true);
       }
     }
   };
 
+
   return (
     <TableCell
+      id={`cell-${rowIndex}-${colIndex}`}
       ref={cellRef}
       tabIndex={0}
-      onClick={() => onSelect(rowIndex, colIndex)}
-      onDoubleClick={onStartEdit}
+      onMouseDown={(e) => {
+        if (e.button !== 0) return;
+        e.preventDefault();
+        setIsEditing(false);
+        setActiveCell({ r: rowIndex, c: colIndex });
+        setSelection({ start: { r: rowIndex, c: colIndex }, end: { r: rowIndex, c: colIndex }, isSelecting: true });
+      }}
+      onMouseEnter={() => {
+        if (selection.isSelecting) setSelection(prev => ({ ...prev, end: { r: rowIndex, c: colIndex } }));
+      }}
+      onDoubleClick={() => setIsEditing(true)}
       onKeyDown={handleKeyDown}
       sx={{
-        p: 0, borderRight: '1px solid #eee', height: 35,
-        outline: isActive ? '2px solid #1a73e8' : 'none',
-        outlineOffset: '-2px',
-        zIndex: isActive ? 2 : 1,
-        position: 'relative',
-        cursor: 'cell',
-        bgcolor: 'white'
+        p: 0, height: 35, width: 100, border: '1px solid #eee',
+        outline: isActive ? '2px solid #1a73e8 !important' : 'none',
+        outlineOffset: '-2px', position: 'relative', bgcolor: 'white',
+        zIndex: isActive ? 5 : 1, cursor: 'cell', userSelect: 'none'
       }}
     >
-      {isEditing ? (
+      {isEditingThis ? (
         <InputBase
           inputRef={inputRef}
-          value={value}
+          fullWidth
+          value={value || ''}
           onChange={(e) => onChange(e.target.value, rowIndex, colIndex)}
-          onBlur={() => onEndEdit()}
-          sx={{ width: '100%', height: '100%', px: 1, fontSize: '0.85rem' }}
+          onKeyDown={handleKeyDown}
+          onBlur={() => setIsEditing(false)}
+          sx={{ px: 1, fontSize: '0.85rem', height: '100%', '& input': { height: '100%', p: 0 } }}
         />
       ) : (
-        <Box sx={{ px: 1, whiteSpace: 'nowrap', overflow: 'hidden', fontSize: '0.85rem' }}>
+        <Box sx={{ px: 1, fontSize: '0.85rem', lineHeight: '35px', height: '100%', overflow: 'hidden', pointerEvents: 'none' }}>
           {value}
         </Box>
       )}
     </TableCell>
+  );
+}, (prev, next) => {
+  const wasActive = prev.activeCell?.r === prev.rowIndex && prev.activeCell?.c === prev.colIndex;
+  const isNowActive = next.activeCell?.r === next.rowIndex && next.activeCell?.c === next.colIndex;
+
+  return (
+    prev.value === next.value &&
+    wasActive === isNowActive &&
+    prev.isEditing === next.isEditing &&
+    prev.selection?.isSelecting === next.selection?.isSelecting
   );
 });
 
